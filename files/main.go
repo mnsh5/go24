@@ -7,7 +7,7 @@ import (
 	"os"
 )
 
-var filePath = "/home/a779433/repos/me/go24/go24/files/hello.txt"
+var filePath = "/home/a779433/repos/me/go24/go24/files/file/hello.txt"
 
 func Files() {
 	file, err := os.Open(filePath)
