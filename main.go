@@ -13,4 +13,8 @@ func main() {
 
 	h := functions.Hello("Binyamin Hoffman", "Polsce")
 	fmt.Println(h)
+
+	nums := []int{1, 2, 3, 4, 5}
+	res := functions.Sum(nums)
+	fmt.Println("The sum of the numbers is:", res)
 }
