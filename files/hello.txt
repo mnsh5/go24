@@ -1,0 +1,2 @@
+Hello, I'm from Polska, I'm born in 1921
+More content to add to hello.txt
