@@ -5,6 +5,7 @@ import (
 
 	controlstructures "github.com/mnsh5/go24/control_structures"
 	"github.com/mnsh5/go24/functions"
+	"github.com/mnsh5/go24/loops"
 	"github.com/mnsh5/go24/variables"
 )
 
@@ -20,5 +21,6 @@ func main() {
 	fmt.Println("The sum of the numbers is:", res)
 
 	controlstructures.ControlStructures()
+	loops.Loops()
 
 }
