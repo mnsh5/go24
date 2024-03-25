@@ -27,5 +27,4 @@ func main() {
 	// files.Files()
 	anomfuncclosure.AnomFunc()
 	anomfuncclosure.Closure()
-
 }
