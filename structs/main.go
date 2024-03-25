@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/mnsh5/go24/structs/models"
+)
 
 type User struct {
 	Username string
@@ -21,5 +25,20 @@ func main() {
 		fmt.Println("City:", user.City)
 		fmt.Println()
 	}
+
+	// Convertir el slice de User a []models.User
+	var modelsUsers []models.User
+	for _, user := range users {
+		modelsUsers = append(modelsUsers, models.User(user))
+	}
+
+	// Crear una nueva instancia de models.User
+	u := new(models.User)
+
+	// Agregar usuarios al slice existente en la instancia de models.User
+	u.AddUser(modelsUsers)
+
+	// Imprimir el slice de usuarios actualizado
+	fmt.Println("Usuarios actualizados:", modelsUsers)
 
 }
