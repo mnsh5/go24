@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
+	anomfuncclosure "github.com/mnsh5/go24/anom-func-closure"
 	controlstructures "github.com/mnsh5/go24/control_structures"
-	"github.com/mnsh5/go24/files"
 	"github.com/mnsh5/go24/functions"
 	"github.com/mnsh5/go24/loops"
 	"github.com/mnsh5/go24/variables"
@@ -24,6 +24,8 @@ func main() {
 	controlstructures.ControlStructures()
 	loops.Loops()
 
-	files.Files()
+	// files.Files()
+	anomfuncclosure.AnomFunc()
+	anomfuncclosure.Closure()
 
 }
