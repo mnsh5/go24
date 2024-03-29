@@ -30,11 +30,17 @@ func (ll *LinkedList) printLinkedList() {
 
 func main() {
 	a := &Node{Value: "A", Next: nil}
+	b := &Node{Value: "B", Next: nil}
+	c := &Node{Value: "C", Next: nil}
+	d := &Node{Value: "D", Next: nil}
+
+	a.Next = b
+	b.Next = c
+	c.Next = d
 
 	// Crear una instancia de LinkedList
-	ll := LinkedList{Head: a}
+	all := LinkedList{Head: a}
 
 	// Llamar al método printLinkedList de la instancia de LinkedList
-	ll.printLinkedList()
-
+	all.printLinkedList() // A -> B -> C -> D -> nil
 }
