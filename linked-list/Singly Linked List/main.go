@@ -63,9 +63,7 @@ func (list *LinkedList) PrintLinkedList() {
 func main() {
 	list := LinkedList{}
 
-	list.Add("a")
-	list.Add("b")
-	list.Add("c")
+	list.Add("Messi")
 	list.Add("Square")
 
 	list.PrintLinkedList()
