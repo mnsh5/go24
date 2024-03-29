@@ -22,10 +22,9 @@ type LinkedList struct {
 func (ll *LinkedList) printLinkedList() {
 	currentNode := ll.Head
 	for currentNode != nil {
-		fmt.Printf("%s -> ", currentNode.Value)
+		fmt.Println(currentNode.Value)
 		currentNode = currentNode.Next
 	}
-	fmt.Println("nil")
 }
 
 func main() {
