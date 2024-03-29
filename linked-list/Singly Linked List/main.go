@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 // Singly Linked List
+// https://edwinsiby.medium.com/understanding-linked-lists-in-go-a-comprehensive-guide-for-all-skill-levels-1e3d91a24d08
 
 type Node struct {
 	Value string
