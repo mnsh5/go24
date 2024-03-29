@@ -8,37 +8,43 @@ import "fmt"
 // LinkedList no necesita que los nodos sean contiguas en la memoria
 // tres operaciones tipicias en LinkedList -> Add(), Remove(), Get()
 
-// Definición de la estructura de un nodo
-type Node struct {
-	Value string
-	Next  *Node
+// Definición de la estructura de un nodo de tipo generico
+type Node[T any] struct {
+	Value T
+	Next  *Node[T]
 }
 
-// Definición de la estructura de la LinkedList
-type LinkedList struct {
-	Head *Node
+// Definición de la estructura de la LinkedList de tipo generico
+type LinkedList[T any] struct {
+	Head *Node[T]
 }
 
-func (ll *LinkedList) printLinkedList() {
+func (ll *LinkedList[T]) printLinkedList() {
 	currentNode := ll.Head
+
+	if currentNode == nil {
+		fmt.Println("Linked list is empty")
+		return
+	}
 	for currentNode != nil {
 		fmt.Println(currentNode.Value)
 		currentNode = currentNode.Next
 	}
+
 }
 
 func main() {
-	a := &Node{Value: "A", Next: nil}
-	b := &Node{Value: "B", Next: nil}
-	c := &Node{Value: "C", Next: nil}
-	d := &Node{Value: "D", Next: nil}
+	a := &Node[string]{Value: "A", Next: nil}
+	b := &Node[string]{Value: "B", Next: nil}
+	c := &Node[string]{Value: "C", Next: nil}
+	d := &Node[string]{Value: "D", Next: nil}
 
 	a.Next = b
 	b.Next = c
 	c.Next = d
 
 	// Crear una instancia de LinkedList
-	ll := LinkedList{Head: a}
+	ll := LinkedList[string]{Head: a}
 
 	// Llamar al método printLinkedList de la instancia de LinkedList
 	ll.printLinkedList()

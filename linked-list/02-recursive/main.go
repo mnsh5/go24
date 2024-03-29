@@ -16,6 +16,7 @@ type LinkedList struct {
 // Método para imprimir la LinkedList de manera recursiva
 func (ll *LinkedList) printRecursive() {
 	if ll.Head == nil {
+		fmt.Println("Linked list is empty")
 		return
 	}
 	fmt.Println(ll.Head.Value)
