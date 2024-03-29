@@ -45,6 +45,32 @@ func (list *LinkedList) Get(value string) string {
 	return ""
 }
 
+func (list *LinkedList) Remove(value string) {
+	if list.Head == nil {
+		fmt.Println("Linked list is empty")
+		return
+	}
+
+	// Si el valor a eliminar está en el primer nodo
+	if list.Head.Value == value {
+		list.Head = list.Head.Next
+		return
+	}
+
+	// Buscar el nodo que contiene el valor a eliminar
+	prevNode := list.Head
+	currentNode := list.Head.Next
+	for currentNode != nil {
+		if currentNode.Value == value {
+			prevNode.Next = currentNode.Next
+			return
+		}
+		prevNode = currentNode
+		currentNode = currentNode.Next
+	}
+
+}
+
 func (list *LinkedList) PrintLinkedList() {
 	currentNode := list.Head
 
@@ -64,8 +90,12 @@ func main() {
 	list := LinkedList{}
 
 	list.Add("Messi")
+	list.Add("Pokemon")
+	list.Add("Thomas Müller")
 	list.Add("Square")
 
 	list.PrintLinkedList()
 	fmt.Println("Get List:", list.Get("Square"))
+	list.Remove("Pokemon")
+	list.PrintLinkedList()
 }
