@@ -6,12 +6,12 @@ import "fmt"
 // https://edwinsiby.medium.com/understanding-linked-lists-in-go-a-comprehensive-guide-for-all-skill-levels-1e3d91a24d08
 
 type Node struct {
-	Value string
-	Next  *Node
+	Value string // campo que almacena el valor del nodo
+	Next  *Node  // puntero al siguiente nodo en la lista enlazada. Si es nil, significa que este nodo es el último nodo en la lista.
 }
 
 type LinkedList struct {
-	Head *Node
+	Head *Node // Un puntero al primer nodo en la lista enlazada. Si la lista está vacía, este puntero será nil.
 }
 
 func (list *LinkedList) Add(value string) {
