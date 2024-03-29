@@ -38,8 +38,8 @@ func main() {
 	c.Next = d
 
 	// Crear una instancia de LinkedList
-	all := LinkedList{Head: a}
+	ll := LinkedList{Head: a}
 
 	// Llamar al método printLinkedList de la instancia de LinkedList
-	all.printLinkedList() // A -> B -> C -> D -> nil
+	ll.printLinkedList()
 }
