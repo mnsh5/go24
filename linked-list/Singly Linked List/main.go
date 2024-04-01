@@ -14,7 +14,7 @@ type LinkedList struct {
 	Head *Node // Un puntero al primer nodo en la lista enlazada. Si la lista está vacía, este puntero será nil.
 }
 
-func (list *LinkedList) Add(value string) {
+func (list *LinkedList) Insert(value string) {
 	newNode := &Node{Value: value, Next: nil}
 
 	if list.Head == nil {
@@ -90,13 +90,14 @@ func (list *LinkedList) PrintLinkedList() {
 func main() {
 	list := LinkedList{}
 
-	list.Add("Messi")
-	list.Add("Pokemon")
-	list.Add("Thomas Müller")
-	list.Add("Square")
+	list.Insert("Messi")
+	list.Insert("Pokemon")
+	list.Insert("Thomas Müller")
+	list.Insert("Square")
 
 	list.PrintLinkedList()
 	fmt.Println("Get List:", list.Get("Square"))
+	fmt.Println("Get List:", list.Get("Thomas Müller"))
 	list.Remove("Pokemon")
 	list.PrintLinkedList()
 }
