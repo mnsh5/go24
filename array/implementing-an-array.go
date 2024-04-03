@@ -57,6 +57,7 @@ func main() {
 	fmt.Println(arr.get(2))
 	fmt.Println(arr.get(3))
 	fmt.Println(arr.get(4))
+	fmt.Println(arr.get(5))
 
 	fmt.Println(arr.getAll())
 
