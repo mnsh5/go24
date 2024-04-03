@@ -42,16 +42,30 @@ func (a *MyArray) getAll() []string {
 	return value
 }
 
+func (a *MyArray) delete(index int) string {
+	item := a.data[index]
+	a.shiftItems(index)
+	return item
+}
+
+func (a *MyArray) shiftItems(index int) {
+	for i := index; i < a.length-1; i++ {
+		a.data[i] = a.data[i+1]
+	}
+	delete(a.data, a.length-1)
+	a.length--
+}
+
 func main() {
 	arr := NewArray()
 	arr.append("Madrid")
 	arr.append("Lisboa")
 	arr.append("Berlin")
+	arr.append("Penguin")
 	arr.append("Amsterdam")
 	arr.append("Buenos Aires")
 	arr.append("Thomas Müller")
 
-	fmt.Println(arr)
 	fmt.Println(arr.get(0))
 	fmt.Println(arr.get(1))
 	fmt.Println(arr.get(2))
@@ -62,5 +76,11 @@ func main() {
 	fmt.Println(arr.getAll())
 
 	arr.pop()
+
 	fmt.Println(arr.getAll())
+
+	arr.delete(3)
+	fmt.Println(arr.getAll())
+	fmt.Println(arr)
+
 }
