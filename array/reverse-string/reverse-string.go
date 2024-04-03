@@ -21,11 +21,13 @@ func reverse(s string) string {
 func main() {
 	// Cadena original
 	str1 := "Leverkusen"
-	str2 := "Frankfort"
+	str2 := "Buenos Aires"
+	str3 := "Augsburgo"
 
 	// Revertir la cadena
 	reversed1 := reverse(str1)
 	reversed2 := reverse(str2)
+	reversed3 := reverse(str3)
 
 	// Imprimir la cadena revertida
 	fmt.Println("Cadena original:", str1)
@@ -33,4 +35,7 @@ func main() {
 
 	fmt.Println("Cadena original:", str2)
 	fmt.Println("Cadena revertida:", reversed2)
+
+	fmt.Println("Cadena original:", str3)
+	fmt.Println("Cadena revertida:", reversed3)
 }
