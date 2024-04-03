@@ -2,33 +2,35 @@ package main
 
 import (
 	"fmt"
+	"reflect"
 )
 
-func reverseString(s string) string {
-	// Convertir la cadena a un slice de bytes
-	bytes := []byte(s)
-
-	// Obtener la longitud de la cadena
-	length := len(bytes)
-
-	// Intercambiar los elementos del slice de bytes
-	for i := 0; i < length/2; i++ {
-		// Intercambiar los elementos en posiciones i y length-i-1
-		bytes[i], bytes[length-i-1] = bytes[length-i-1], bytes[i]
+func reverse(s string) string {
+	if reflect.TypeOf(s).Kind() != reflect.String || s == "" || len(s) < 2 {
+		return s
 	}
 
-	// Convertir el slice de bytes invertido de nuevo a una cadena
-	return string(bytes)
+	backwards := make([]byte, 0, len(s)) // Inicializar un slice de bytes vacío con capacidad suficiente
+	for i := len(s) - 1; i >= 0; i-- {
+		backwards = append(backwards, s[i]) // Agregar caracteres al final del slice
+	}
+
+	return string(backwards) // Convertir el slice de bytes en una cadena
 }
 
 func main() {
 	// Cadena original
-	str := "München"
+	str1 := "Leverkusen"
+	str2 := "Frankfort"
 
 	// Revertir la cadena
-	reversed := reverseString(str)
+	reversed1 := reverse(str1)
+	reversed2 := reverse(str2)
 
 	// Imprimir la cadena revertida
-	fmt.Println("Cadena original:", str)
-	fmt.Println("Cadena revertida:", reversed)
+	fmt.Println("Cadena original:", str1)
+	fmt.Println("Cadena revertida:", reversed1)
+
+	fmt.Println("Cadena original:", str2)
+	fmt.Println("Cadena revertida:", reversed2)
 }
