@@ -26,6 +26,13 @@ func (a *MyArray) append(item string) {
 	a.length++
 }
 
+func (a *MyArray) pop() string {
+	lastItem := a.data[a.length-1]
+	delete(a.data, a.length-1)
+	a.length--
+	return lastItem
+}
+
 func (a *MyArray) getAll() []string {
 	// slice -> primer elemento es un array de string, el cero indica el valor en que iniciamos el slice, y el len sera el tamaño del slice en base a los datos guardados
 	value := make([]string, 0, len(a.data))
@@ -51,5 +58,8 @@ func main() {
 	fmt.Println(arr.get(3))
 	fmt.Println(arr.get(4))
 
+	fmt.Println(arr.getAll())
+
+	arr.pop()
 	fmt.Println(arr.getAll())
 }
