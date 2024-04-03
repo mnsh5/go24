@@ -31,9 +31,13 @@ func main() {
 	arr.append("Madrid")
 	arr.append("Lisboa")
 	arr.append("Berlin")
+	arr.append("Amsterdam")
+	arr.append("Buenos Aires")
 
 	fmt.Println(arr)
 	fmt.Println(arr.get(0))
 	fmt.Println(arr.get(1))
 	fmt.Println(arr.get(2))
+	fmt.Println(arr.get(3))
+	fmt.Println(arr.get(4))
 }
