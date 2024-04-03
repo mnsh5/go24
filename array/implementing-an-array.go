@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 // Array -> organiza los elementos de forma secuencial
-// Metodos para un Array -> Insert(), Delete(), append(), Lookup(), Get()
+// Metodos para un Array -> Insert(), Delete(), Append(), Lookup(), Get()
 
 type MyArray struct {
 	length int
