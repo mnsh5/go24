@@ -59,8 +59,8 @@ func sortResult(result []int) {
 }
 
 func main() {
-	msa1 := []int{0, 3, 4, 31, 12}
-	msa2 := []int{5, 35, 24, 2, 15}
-	sortedResult := SortMerge(msa1, msa2)
+	arr1 := []int{0, 3, 4, 31, 12}
+	arr2 := []int{5, 35, 24, 2, 15}
+	sortedResult := SortMerge(arr1, arr2)
 	fmt.Println(sortedResult)
 }
