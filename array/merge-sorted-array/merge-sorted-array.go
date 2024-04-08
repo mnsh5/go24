@@ -2,21 +2,6 @@ package main
 
 import "fmt"
 
-// Función sortResult ordena un slice de enteros usando el algoritmo de ordenamiento de burbuja
-func sortResult(result []int) {
-	// Itera sobre todos los elementos menos el último
-	for i := 0; i < len(result)-1; i++ {
-		// Itera sobre los elementos a partir del elemento i+1
-		for j := i + 1; j < len(result); j++ {
-			// Compara los elementos en las posiciones i y j
-			if result[i] > result[j] {
-				// Si el elemento en la posición i es mayor que el elemento en la posición j, los intercambia
-				result[i], result[j] = result[j], result[i]
-			}
-		}
-	}
-}
-
 // Función SortMerge fusiona y ordena dos arrays de enteros
 func SortMerge(arr1, arr2 []int) []int {
 	// Calcula la longitud total del resultado
@@ -56,6 +41,21 @@ func SortMerge(arr1, arr2 []int) []int {
 	sortResult(result)
 
 	return result
+}
+
+// Función sortResult ordena un slice de enteros usando el algoritmo de ordenamiento de burbuja
+func sortResult(result []int) {
+	// Itera sobre todos los elementos menos el último
+	for i := 0; i < len(result)-1; i++ {
+		// Itera sobre los elementos a partir del elemento i+1
+		for j := i + 1; j < len(result); j++ {
+			// Compara los elementos en las posiciones i y j
+			if result[i] > result[j] {
+				// Si el elemento en la posición i es mayor que el elemento en la posición j, los intercambia
+				result[i], result[j] = result[j], result[i]
+			}
+		}
+	}
 }
 
 func main() {
