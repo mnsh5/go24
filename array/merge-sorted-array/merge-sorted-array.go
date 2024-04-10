@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 // Función SortMerge fusiona y ordena dos arrays de enteros
-func SortMerge(arr1, arr2 []int) []int {
+func SortMerge(arr1 []int, arr2 []int) []int {
 	// Calcula la longitud total del resultado
 	totalLen := len(arr1) + len(arr2)
 	// Crea un slice vacío con una capacidad inicial igual a la longitud total del resultado
